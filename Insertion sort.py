@@ -10,7 +10,6 @@ unsortedlist=[7,2,9,1,3,4,6,5]
 def insertion_sort(list):
     for i in range(1,len(list)):
         j= i
-        #
         while list[j-1]>list[j] and j>0: #swapping conditions for inner loop which checks the elmn.
             auxiliary=list[j]
             list[j]=list[j-1]
