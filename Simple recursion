@@ -1,0 +1,56 @@
+#ALGORYTMY REKURENCYJNE
+
+def rekur(n):
+    if n%2==0:
+        if n ==2:
+            return 2
+        else:
+            return rekur(n-1)+n
+    else:
+        return rekur(n-1)
+print(rekur(11))
+
+print('--------------------')
+#Zad 1
+def suma_nieparzystych(n):
+    if n%2!=0:
+        if n==1:
+            return 1
+        else:
+            return suma_nieparzystych(n-1)+n
+    else:
+        return suma_nieparzystych(n-1)
+print(suma_nieparzystych(100))
+print('---------------------')
+#Zad 2
+def sumapieciu(limit,liczba):
+    if limit==5:
+        return liczba
+    return sumapieciu(limit+1,liczba*liczba)+liczba
+print(sumapieciu(1,2))
+print('----------------------')
+#Zad 3
+
+
+
+
+
+
+
+#Rekurencja średniozaawansowane przypadki
+def zwroc_silnie(n):
+    if n==1 or n==0:
+        return 1
+    else:
+        return n*zwroc_silnie(n-1)
+print(zwroc_silnie(6))
+print('--------------------')
+
+
+def fibonacii(n):
+    if n==1 or n==2:
+        return 1
+    else:
+        return fibonacii(n-1)+fibonacii(n-2)
+print(fibonacii(6))
+
