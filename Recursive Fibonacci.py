@@ -30,3 +30,4 @@ def znajdź_liczby_z_ciągu_fibonacciego(zakres):
 
 print(znajdź_liczby_z_ciągu_fibonacciego(50))
 
+#First Revision
