@@ -5,12 +5,18 @@ def fibonacii(n):
         return 1
     if n==0:
         return 0
+    #w przypadku liczb 1 bądź 0 zwracamy 0 lub 1
+    #trzy pierwsze liczby w ciągu fibonacciego (licząc od 0) to 0,1,1
     if n!=1 or 0:
-        return fibonacii(n-1)+fibonacii(n-2)
+        return fibonacii(n-1)+fibonacii(n-2) #każde kolejene liczby to suma liczb poprzedniej i poprzedzającej poprzednią
+        #tym samym żeby otrzymać np wartość 4 będziemy cofać się rekurencyjnie aż do base casea (którym jest 1 i 0)
+        #i zliczać po kolei otrzymane 'odpowiedzi' na kolejne cyfry w ciągu
 
+for i in range(0,10):
+    print(i,'liczba w ciągu fibonacciego to:',fibonacii(i))
 
-print("16 liczba ciągu fibonacciego")
-print(fibonacii(16))
+print("\n16 liczba ciągu fibonacciego:",fibonacii(16))
+
 
 print('----------Zadanie z ciągufibonacciego nizej-----')
 #Zadanie
