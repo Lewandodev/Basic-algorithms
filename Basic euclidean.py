@@ -54,7 +54,7 @@ print('Największe dzielniki liczb:')
 
 def NWD_rekurencyjne(a,b):
     if b!=0:  #rekurencja będzie trwała dopóki reszta z dzielenia b (lub a) nie będzie równa 0
-        return NWDeuklides(b,a%b) #dzięki zastosowaniu rekurencji nie potrzebujemy zmiennej pomocniczej
+        return NWD_rekurencyjne(b,a%b) #dzięki zastosowaniu rekurencji nie potrzebujemy zmiennej pomocniczej
     return a
 
 print('\nnajwiększegy wspólny dzielnik 15 oraz 20',NWD_rekurencyjne(15,20))
