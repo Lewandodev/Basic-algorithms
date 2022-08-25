@@ -72,6 +72,7 @@ def Z1połowienie(a,b,epsilon):
             a=środek
     return (a+b)/2
 print('Zadanie 1: ')
+print('Exercise 1:')
 print(round(Z1połowienie(0,20,0.001),4))
 
 #ZADANIE 2
@@ -97,4 +98,5 @@ def Z2_połowienie(a,b,epsilon):
     return (a+b)/2
 
 print('Zadanie 2:')
+print('Exercise 2:')
 print(round(Z2_połowienie(0,1,0.001),3))
