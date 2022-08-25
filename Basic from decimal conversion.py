@@ -7,11 +7,12 @@ def decimal_upTo9_conv(cipher,system):
         r=n//system
         c=n%system
         c=str(c)  #we need to convert the value to string to avoid errors
-        odwr=c+odwr
+        inverted=c+inverted
         n=r
-    return odwr
+    return inverted
 
 print('Converting values up to 9 conversion of 166 to 4 system:',decimal_upTo9_conv(166,4))
+print('Converting values up to 9 conversion of 38 to 3 system:',decimal_upTo9_conv(38,3))
 def decymalny_na_binarny(cyfra):
     odwr='' # ta zmienna przechowuje czytane od tyłu reszty z dzielenia wprowadzonej przez uzytkowniaka cyfyr przez 2
     sys=2 #bo binarny dzielimy przez 2 w innych systemach może być 4 3 8 itd
@@ -24,7 +25,7 @@ def decymalny_na_binarny(cyfra):
         n=r
     return odwr
 
-print(decymalny_na_binarny(20))
+print('\nzamiana 20 na system binarny',decymalny_na_binarny(20))
 
 def decymalny_do_9(cyfra,sys):
     odwr='' # ta zmienna przechowuje czytane od tyłu reszty z dzielenia wprowadzonej przez uzytkowniaka cyfyr przez 2
@@ -38,9 +39,9 @@ def decymalny_do_9(cyfra,sys):
         n=r
     return odwr
 
-print(decymalny_do_9(15,9))
+print('\n15 zamiana z sys. dec. na system 9:',decymalny_do_9(15,9))
 
-print(decymalny_do_9(17,6))
+print('\n17 zamiana z sys. dec. na system 6:',decymalny_do_9(17,6))
 
 
 
