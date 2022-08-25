@@ -10,7 +10,7 @@
 
 
 #our continuous function is defined as following: y=ax+b with epsilon being precision value
-#funkcja liniowa/ciągła jest definiowana jako: y=ax+b, epsilon odpowiada za skalę dokładności wyznaczonego miejsca zerowego
+#funkcja liniowa/ciągła jest definiowana jako: y=ax+b, epsilon odpowiada za skalę dokładności przedziału
 
 def wartosć_funkcji(x):
     return x+2
@@ -26,12 +26,20 @@ def połowienie_przedziałów(a,b,epsilon):
     #w przypadku gdy a lub b wynosi 0 nasze miejsce zerowe jest jedną z tych zmiennych
 
     while b-a>epsilon:
+        #dopóki przedział jest za 'szeroki' liczymy połowę przedziału i badamy czy funkcja jest rosnąca/ciągła/malejąca
+        #we will be loopin till our range is too "wide" we will be looking for the middles and then checking where our root is supposed to be
         środek=(a+b)/2
         if wartosć_funkcji(środek)==0:
+            #znaleźliśmy miejsce zerowe
+            #we found the root
             return środek
         if wartosć_funkcji(a)*wartosć_funkcji(środek)<0:
+            #miejsce zerowe jest na "lewo" od środka
+            #the root is on the "left" from the middle
             środek=b
         else:
+            #miejsce zerowe jest na "prawo" od środka
+            # the root is on the "right" from the middle
             a=środek
     return (a+b)/2
 
