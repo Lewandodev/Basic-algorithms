@@ -26,8 +26,8 @@ def połowienie_przedziałów(a,b,epsilon):
     #w przypadku gdy a lub b wynosi 0 nasze miejsce zerowe jest jedną z tych zmiennych
 
     while b-a>epsilon:
-        #dopóki przedział jest za 'szeroki' liczymy połowę przedziału i badamy czy funkcja jest rosnąca/ciągła/malejąca
-        #we will be looping as longa s our range is too "wide" we will be looking for the middles and then checking where our root is supposed to be
+    #dopóki przedział jest za 'szeroki' liczymy połowę przedziału i badamy czy f(połowy) jest dodatnie bądź ujemne to zwężą przedział i mówi nam "po której stronie" jest miejsce zerowe
+        #we will be looping as longa s our range is too "wide" we will be looking for the middles and then checking whether funtion(middle) is positive or negative this tells us on which "side" our root is supposed to be
         środek=(a+b)/2
         if wartosć_funkcji(środek)==0:
             #znaleźliśmy miejsce zerowe
