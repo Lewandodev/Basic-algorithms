@@ -27,7 +27,7 @@ def połowienie_przedziałów(a,b,epsilon):
 
     while b-a>epsilon:
         #dopóki przedział jest za 'szeroki' liczymy połowę przedziału i badamy czy funkcja jest rosnąca/ciągła/malejąca
-        #we will be loopin till our range is too "wide" we will be looking for the middles and then checking where our root is supposed to be
+        #we will be looping as longa s our range is too "wide" we will be looking for the middles and then checking where our root is supposed to be
         środek=(a+b)/2
         if wartosć_funkcji(środek)==0:
             #znaleźliśmy miejsce zerowe
@@ -71,9 +71,10 @@ def Z1połowienie(a,b,epsilon):
         else:
             a=środek
     return (a+b)/2
-print('Zadanie 1: ')
-print('Exercise 1:')
-print(round(Z1połowienie(0,20,0.001),4))
+print('\nZadanie 1: ')
+print('Miejsce zerowe funkcji f(x)=x**2-4*x-6: ',round(Z1połowienie(0,20,0.001),4))
+print('\nExercise 1:')
+print('Root of function f(x)=x**2-4*x-6:: ',(round(Z1połowienie(0,20,0.001),4)))
 
 #ZADANIE 2
 #EXERCISE 2
@@ -97,6 +98,8 @@ def Z2_połowienie(a,b,epsilon):
             a=środek
     return (a+b)/2
 
-print('Zadanie 2:')
-print('Exercise 2:')
-print(round(Z2_połowienie(0,1,0.001),3))
+print('\nZadanie 2:')
+print('Miejsce zerowe funkcji f(x)=2*(x**3)+2: ',(round(Z2_połowienie(0,1,0.001),3)))
+print('\nExercise 2:')
+print('Root of function f(x)=2*(x**3)+2: ',(round(Z2_połowienie(0,1,0.001),3)))
+
