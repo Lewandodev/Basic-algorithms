@@ -30,17 +30,19 @@ def znajdź_nwd_wielu_liczb(lista_liczb):
         return NWDeuklides(NWDeuklides(lista_liczb[i],lista_liczb[i+1]),lista_liczb[len(lista_liczb)-1]) <---incorrect on long range'''
 
     while len(lista_liczb) > 2:
-        a= NWDeuklides(lista_liczb[len(lista_liczb) - 2], lista_liczb[len(lista_liczb) - 1])
-        lista_liczb.pop()
-        lista_liczb.pop()
-        lista_liczb.append(a)
+        a= NWDeuklides(lista_liczb[0], lista_liczb[1])
+        lista_liczb.remove(lista_liczb[0])
+        lista_liczb.remove(lista_liczb[1])
+        lista_liczb.insert(0,a)
     if len(lista_liczb)==2:
         return NWDeuklides(lista_liczb[0], lista_liczb[1])
 
 
-
+print('NWD liczb [6, 12, 30]:')
 print(znajdź_nwd_wielu_liczb([6, 12, 30]))
+print('\nNWD liczb [12, 36, 78, 120]:')
 print(znajdź_nwd_wielu_liczb([12, 36, 78, 120]))
+print('\nNWD liczb [244, 1024, 4024, 5096, 10020, 17448]:')
 print(znajdź_nwd_wielu_liczb([244, 1024, 4024, 5096, 10020, 17448]))
 
 
@@ -106,14 +108,16 @@ print('\nFinding GCD of many numbers')
 def many_gcd(numblist):
 
     while len(numblist) > 2:
-        a= iterative_eculid(numblist[len(numblist) - 2], numblist[len(numblist) - 1])
-        numblist.pop()
-        numblist.pop()
-        numblist.append(a)
+        a= iterative_eculid(numblist[0], numblist[1])
+        numblist.remove(numblist[0])
+        numblist.remove(numblist[1])
+        numblist.insert(0,a)
     if len(numblist)==2:
         return NWDeuklides(numblist[0], numblist[1])
 
 numberslist=[12, 36, 78, 120]
 print('GCD of numbers:',numberslist)
 print(many_gcd(numberslist))
-#third revision
+
+
+#third revision fixed the many gcd algorithm
