@@ -102,3 +102,18 @@ print('\nNumbers converted to decimal:')
 print('100011011 (binary system) converted to decimal:',conversionToDec(100011011,2))
 print('61 (octal system) converted to decimal:',conversionToDec(61,8))
 print('8BFC (octal system) converted to decimal:',conversionToDec('8BFC',16)) #hexadecimal numbers must be typed as string values to prevent error
+
+
+#additional not built-in powering function
+
+#easy recursive function that will be calling itself till reaching the base case which is either 0 or 1 then returning all the values
+#for example:power(3,3)=3*power(3,2)=3*3*power(3,1)=3*3*3=27
+def power(num,pow):
+    if pow==0:
+        return 1
+    elif pow==1:
+        return num
+    else:
+        return num*power(num,pow-1)
+
+print('\nManual powering 5 to the power of 4:',power(5,4))
