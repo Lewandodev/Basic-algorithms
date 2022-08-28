@@ -98,3 +98,7 @@ def conversionToDec(num,sys):
 
     return end_value
 
+print('\nNumbers converted to decimal:')
+print('100011011 (binary system) converted to decimal:',conversionToDec(100011011,2))
+print('61 (octal system) converted to decimal:',conversionToDec(61,8))
+print('8BFC (octal system) converted to decimal:',conversionToDec('8BFC',16)) #hexadecimal numbers must be typed as string values to prevent error
