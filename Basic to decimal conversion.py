@@ -70,3 +70,31 @@ print('wartość 93 (system 8) w systemie decymalnym:',dowolny_na_decymalny(93,8
 print('wartość 8DAC (system 16) w systemie decymalnym:',dowolny_na_decymalny('8DAC',16))
 print('wartość 321231 (system 4) w systemie decymalnym:',dowolny_na_decymalny(321231,4))
 
+
+
+
+#englsih commentary
+#cipher function will be chcecking if user didn't add value from hexadecimal system
+#if so the built-in int(inserted value,16) will quickly convert it to standard decimal number
+def cipher(n):
+    if n==str(n):
+        a=int(n,16)
+        return a
+    if n>0 and n<10:
+        return n
+
+def conversionToDec(num,sys):
+    num=str(num)
+    #our number will be converted to string because python interpret any string value as an array therefore we will be going through all the indexes
+    power=0
+    #and increase the power value as our indexes get higher
+    end_value=0 #each of the cipher converted in our function will be added to this variable
+
+    for i in range(len(num) - 1, -1, -1):
+        #we start at the last index as power value for it is 0. Successively the powers will be increasing till we reach the final index
+        end_value=end_value+cipher(num[i])*sys**power
+        #our index must be multiplied by the current system and then taken to the current power
+        power+=1
+
+    return end_value
+
