@@ -35,10 +35,11 @@ print(czy_wzorzec('\nala ma kota','ta'))
 print(czy_wzorzec('adam je ryz','je ryzy'))
 print(czy_wzorzec('kota dał','a d'))
 
-print('\nzadanie z wyszukiwania wzorca poniżej: ')
-print('exercise from naive pattern algorithm:')
+print('\nZadanie z wyszukiwania wzorca poniżej: ')
+print('Exercise from naive pattern algorithm:')
 #zadanie
 #exercise
+
 
 def cyfr_czy_wzorzec(wry,wzor):
     wry=str(wry)
