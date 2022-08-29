@@ -1,11 +1,19 @@
 #wyszukiwanie wzorca
+#(Naive) pattern search
+
 #głównym celem jest wyszukiwanie czy np. jakiś ciąg znaków występuje w naszym zdaniu albo słowie
 #Sprawdzanie będzie polegało na zweryfikowaniu czy w danym wyrażeniu możliwe jest znalezienie szukanego wzorca.
 #szukamy najpierw pierwszej litery ze wzorca w wyrażeniu, a następnie sprawdzamy czy kolejne znaki pokrywają się także ze wzorcem
 #dodatkowo sprawdzamy czy szukany wzorzec zmieści się w wyrażeniu
 
+#the main goal is to search whether a string of characters or single letter appears in our sentence or word
+#Search will verify if you can find the pattern you are looking for in a given word/sentence
+#first we look for the first letter from the pattern in the expression, and then check whether subsequent characters also match the pattern
+#in addition, we also check whether the pattern we are looking for fits in our phrase
+
 def czy_wzorzec(wyr,wzorz):
-    pierWzorz=wzorz[0]
+    pierWzorz=wzorz[0] #first letter of our pattern we will be looking for
+    #pierwszy index (litera) naszego wzorca którego będziemy szukać
 
     for i in range(0,len(wyr)):
         if pierWzorz==wyr[i] and len(wyr)-i-len(wzorz)>=0:  #sprawdzamy czy szukany wzorzec zmieści się w wyrażeniu
