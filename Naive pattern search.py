@@ -17,21 +17,29 @@ def czy_wzorzec(wyr,wzorz):
 
     for i in range(0,len(wyr)):
         if pierWzorz==wyr[i] and len(wyr)-i-len(wzorz)>=0:  #sprawdzamy czy szukany wzorzec zmieści się w wyrażeniu
+            #We check if the pattern fits
             wzór=True
             for j in range(1,len(wzorz)):
                 if wzorz[j]!=wyr[i+j]:
+                    #indeksy mówią nam gdzie znajduje się potencjalny początek poszukiwanego wzorca
+                    #indexes determine where our potential pattern begin
                     wzór=False
             if wzór==True:
                 return True
 
     return False
 
-print(czy_wzorzec('ala ma kota','ta'))
+print('Sprawdzanie czy w zdaniach występuje wzorzec:')
+print('Checking if our pattern appears in sentences:')
+print(czy_wzorzec('\nala ma kota','ta'))
 print(czy_wzorzec('adam je ryz','je ryzy'))
 print(czy_wzorzec('kota dał','a d'))
 
-print('zadanie 1 ponizej: ')
-#ZADANIE 1
+print('\nzadanie z wyszukiwania wzorca poniżej: ')
+print('exercise from naive pattern algorithm:')
+#zadanie
+#exercise
+
 def cyfr_czy_wzorzec(wry,wzor):
     wry=str(wry)
     wzor=str(wzor)
