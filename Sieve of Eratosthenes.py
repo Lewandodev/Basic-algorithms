@@ -29,11 +29,11 @@ def prime_check_eratosthenes(n):
     return array[n]
 
 print('Sieve of Eratosthenes 1 variation of algorithm')
-print('Is 11 prime',prime_check_eratosthenes(11))
-print('Is 34 prime',prime_check_eratosthenes(34))
-print(prime_check_eratosthenes(67))
-print(prime_check_eratosthenes(97))
-print(prime_check_eratosthenes(99))
+print('\nIs 11 prime:',prime_check_eratosthenes(11))
+print('Is 34 prime:',prime_check_eratosthenes(34))
+print('Is 67 prime:',prime_check_eratosthenes(67))
+print('Is 97 prime:',prime_check_eratosthenes(97))
+print('Is 99 prime:',prime_check_eratosthenes(99))
 
 #auxiliary function
 
