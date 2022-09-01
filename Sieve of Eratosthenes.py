@@ -48,3 +48,33 @@ def sieve_iter(n): #iterative solution
 print('\nPrime numbers up to 100')
 print(sieve_iter(100))
 
+#Second variation of algorithm
+#second variation will consist only of one function which will already return all the prime numbers from user given integer segment
+
+def eratosthenes_second(n):
+    prim_numbers=[]
+
+    array=[]
+    if n<2:
+        return False
+    if n==1:
+        return False
+    for i in range(0,n+1):
+        array.append(i)
+        array[i]=True
+    i=2
+
+    while i<=(n**0.5):
+        for j in range(i,n+1,i):
+            array[j]=False
+        i+=1
+
+    for a in range(0,n+1):
+        if array[a]==True:
+            prim_numbers.append(a)
+
+    return prim_numbers
+
+
+print('\nPrime numbers up to 50 with second algorithm')
+print(eratosthenes_second(50))
