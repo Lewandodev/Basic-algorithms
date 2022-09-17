@@ -48,4 +48,5 @@ def transoprt_mąki(ilość_mąki):
     return liczba_opakowań
 
 print('\nW ilu opakowaniach przetransportujemy 68kg mąki:',transoprt_mąki(68))
+
 print('In how many packages we will transport 68 kilograms of flour:',transoprt_mąki(68))
