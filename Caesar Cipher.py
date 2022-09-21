@@ -25,5 +25,10 @@ def decrypt(w,k):
     return decryption
 
 
+print('Encrypt word: Ant with key 4')
+print('Encrypted:',encrypt('ANT',4))
+
+print('\nDecrypt word ERX with key 4')
+print('Decrypted:',decrypt('ERX',4))
 
 
